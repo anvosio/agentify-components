@@ -15,7 +15,6 @@ import { registerAgentifiedComponent } from '../utils/registry';
  */
 export const agentifySearchBar = (config) => (WrappedComponent) => {
   return function AgentifiedSearchBar(props) {
-    useEffect(() => {
       // Register the component with the specified configuration
       registerAgentifiedComponent({
         type: 'search-bar',
@@ -24,7 +23,6 @@ export const agentifySearchBar = (config) => (WrappedComponent) => {
         description: config.description || 'Search component',
         // capabilities: ['text-search', 'query-enhancement']
       });
-    }, []);
 
     // // Function to handle search based on behavior type
     // const handleSearch = (value) => {

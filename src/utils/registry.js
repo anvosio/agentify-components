@@ -112,31 +112,8 @@ export const getRegisteredComponents = () => {
   return [...componentRegistry];
 };
 
-/**
- * Generate configuration for MCP server
- * @returns {string} JSON configuration
- */
-export const generateMCPConfig = () => {
-  // TODO: Implement MCP configuration generator , componentRegistry 
 
-  return
-};
 
-/**
- * Write MCP configuration to a file (to be used during build)
- * @param {string} filename - The filename to write to
- * @param {function} writeFile - File system write function
- */
-export const writeMCPConfig = (filename, writeFile) => {
-  const config = generateMCPConfig();
-  writeFile(filename, config, (err) => {
-    if (err) {
-      console.error('Error writing MCP config:', err);
-    } else {
-      console.log(`MCP configuration written to ${filename}`);
-    }
-  });
-};
 
 /**
  * Clear the registry

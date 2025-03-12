@@ -12,7 +12,8 @@ export { agentifyButton } from './hoc/agentifyButton';
 export { 
   registerAgentifiedComponent,
   getRegisteredComponents,
-  generateMCPConfig,
-  writeMCPConfig,
   clearRegistry
 } from './utils/registry'; 
+
+// Export the MCP server template generator
+export { generateMCPServer } from './template_generator/mcp';

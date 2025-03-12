@@ -17,7 +17,6 @@ import { registerAgentifiedComponent } from '../utils/registry';
  */
 export const agentifyButton = (config) => (WrappedComponent) => {
   return function AgentifiedButton(props) {
-    useEffect(() => {
       // Register the component with the specified configuration
       registerAgentifiedComponent({
         type: 'button',
@@ -26,7 +25,6 @@ export const agentifyButton = (config) => (WrappedComponent) => {
         selector: config.selector || null,
         description: config.description || 'Button component'
       });
-    }, []);
 
     // Function to handle button click based on behavior type
     // const handleClick = (event) => {

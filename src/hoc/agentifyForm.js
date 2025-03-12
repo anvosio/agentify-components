@@ -16,7 +16,6 @@ import { registerAgentifiedComponent } from '../utils/registry';
  */
 export const agentifyForm = (config) => (WrappedComponent) => {
   return function AgentifiedForm(props) {
-    useEffect(() => {
       // Register the component with the specified configuration
       registerAgentifiedComponent({
         type: 'form',
@@ -26,7 +25,6 @@ export const agentifyForm = (config) => (WrappedComponent) => {
         selector: config.selector || null,
         description: config.description || 'Form component'
       });
-    }, []);
 
     // Function to handle form submission based on behavior type
     // const handleSubmit = (values) => {
