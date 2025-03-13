@@ -136,8 +136,9 @@ import path from 'path';
   function dockerFileGenerator() {
     return `
     FROM node:22.12-alpine AS builder
+    # CHANGE THIS TO THE CORRECT PATH
 
-    COPY src/postgres /app   #CHANGE THIS TO THE CORRECT PATH
+    COPY src/postgres /app   
     COPY tsconfig.json /tsconfig.json
 
     WORKDIR /app
@@ -165,14 +166,14 @@ import path from 'path';
 
 
 
-  export function buildMCPFolder(tools: MCPTool[]) {
+  export function buildMCPFolder(tools: MCPTool[], buildPath: string) {
     const serverCode = mcpServerGenerator(tools);
     const packageJson = packageJsonGenerator();
     const tsconfig = tsconfigGenerator();
     const readme = readmeGenerator();
     const dockerFile = dockerFileGenerator();
     // Generate the other files in the folder
-    const folderPath = path.join(__dirname,  'mcpServer');
+    const folderPath = path.join(buildPath,  'mcpServer');
     fs.mkdirSync(folderPath, { recursive: true });
     fs.writeFileSync(path.join(folderPath, 'index.ts'), serverCode);
     fs.writeFileSync(path.join(folderPath, 'package.json'), packageJson);
