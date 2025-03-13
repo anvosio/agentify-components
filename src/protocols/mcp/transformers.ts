@@ -20,3 +20,32 @@ export function mcpToolTransformer(config: MCPConfigOptions): MCPTool {
     }
   };
 }
+
+
+// EXAMPLES
+
+// {
+//     name: "github_create_issue",
+//     description: "Create a GitHub issue",
+//     inputSchema: {
+//       type: "object",
+//       properties: {
+//         title: { type: "string" },
+//         body: { type: "string" },
+//         labels: { type: "array", items: { type: "string" } }
+//       }
+//     }
+//   }
+
+
+//   {
+//     name: "execute_command",
+//     description: "Run a shell command",
+//     inputSchema: {
+//       type: "object",
+//       properties: {
+//         command: { type: "string" },
+//         args: { type: "array", items: { type: "string" } }
+//       }
+//     }
+//   }
