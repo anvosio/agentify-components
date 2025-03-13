@@ -4,7 +4,7 @@
  */
 
 // Store for component metadata
-const componentRegistry = [];
+const componentRegistry: any[] = [];
 
 /**
  * Generates a unique ID for registered components
@@ -19,7 +19,7 @@ const generateUniqueId = () => {
  * @param {object} metadata - The component metadata to validate
  * @returns {boolean} True if valid, throws error if invalid
  */
-const validateMetadata = (metadata) => {
+const validateMetadata = (metadata: any) => {
   if (!metadata.type) {
     throw new Error('Component metadata must include a type');
   }
@@ -83,7 +83,7 @@ const validateMetadata = (metadata) => {
  * @param {object} metadata - Component metadata
  * @returns {object} The registered component metadata
  */
-export const registerAgentifiedComponent = (metadata) => {
+export const registerAgentifiedComponent = (metadata: any) => {
   // Validate the metadata
   validateMetadata(metadata);
   
@@ -97,9 +97,9 @@ export const registerAgentifiedComponent = (metadata) => {
   componentRegistry.push(registeredComponent);
   
   // Log to console during development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Registered agentified component:', metadata);
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   console.log('Registered agentified component:', metadata);
+  // }
   
   return registeredComponent;
 };
