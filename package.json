@@ -10,7 +10,8 @@
     "generate-mcp": "node scripts/generate-mcp-config.js"
   },
   "dependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "reflect-metadata": "^0.2.2"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",

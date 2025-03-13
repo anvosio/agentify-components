@@ -3,17 +3,8 @@
  * A lightweight framework to make your components smarter with agent metadata.
  */
 
-// Export the higher-order components
-export { agentifySearchBar } from './hoc/agentifySearchBar';
-export { agentifyForm } from './hoc/agentifyForm';
-export { agentifyButton } from './hoc/agentifyButton';
+// Export the decorators components
 
-// Export the registry utilities
-export { 
-  registerAgentifiedComponent,
-  getRegisteredComponents,
-  clearRegistry
-} from './utils/registry'; 
 
-// Export the MCP server template generator
-export { generateMCPServer } from './template_generator/mcp';
+export { AgentConfig } from './decorators';
+export { generateMCPServer } from './protocols/mcp/index';

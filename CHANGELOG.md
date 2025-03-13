@@ -21,15 +21,19 @@ with an expanded "Thoughts" section to capture development reflections and lesso
 ## [0.0.1] - 2025-03-12
 
 ### Added
-- Build time initialization pattern for MCP server
-- MCP server template generator
+- Started off with HOC component pattern for agentifying components
+- Realized its not the best fit as it is better used for runtime configuration, but we need it for build time configuration
+- Changed to use decorators for the metadata
 
 ### Changed
-- Added component architecture to properly separate concerns
+- Nothing
 
 ### Fixed
-- Corrected implementation of MCP server that was incorrectly being built during build time
+- Nothing
 
 ### Infrastructure
+- Nothing
 
 ### Thoughts
+- Quite literally wondered why did I even think HOC was a good idea
+- Starting off with MCP but need to accomodate for other protocols

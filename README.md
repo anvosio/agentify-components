@@ -169,3 +169,19 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+
+
+
+----------
+
+
+Rewrite
+
+Overview of the Framework
+The framework consists of four main parts:
+
+Decorator (@AgentConfig): Attaches metadata to components, including common fields and protocol-specific configurations.
+Transformers: Adapt the generic metadata into protocol-specific formats (e.g., for protocols like MCP or XYZ).
+Generators: Produce server file content based on the transformed configurations, tailored to each protocol.
+CLI Tool: Processes components, applies the appropriate transformer and generator based on the target protocol, and outputs the server file.
+This design ensures flexibility—developers can define components once and support multiple protocols by adding new transformers and generators as needed.
