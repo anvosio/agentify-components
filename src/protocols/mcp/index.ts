@@ -1,4 +1,4 @@
-import { mcpServerGenerator } from "./generator";
+import { buildMCPFolder } from "./generator";
 import { mcpToolTransformer } from "./transformers";
 import { getAgentConfig } from "../../utils/metadata";
 
@@ -8,6 +8,6 @@ export function generateMCPServer(components: any[]) {
         return mcpToolTransformer({ ...comp, config });
       });
 
-    return mcpServerGenerator(tools);
+    return buildMCPFolder(tools);
 }
 
