@@ -5,7 +5,7 @@
 
 A framework for adding semantic metadata to React components, making them "agent-aware" for AI systems and automation tools.
 
-# NOT FINISHED! Last updated 14th march, 2025
+
 
 ## Overview
 
@@ -24,6 +24,15 @@ This framework adds a semantic layer to your components through decorators that:
 ```bash
 npm install @anvosio/agentify-components
 ```
+
+## Roadmap
+
+Right now, this only generates an MCP server. The next most important milestone among other things is enabling to build local tools that can be passed to llms along with the other bunch of tools that your already building
+
+This lets you have both frontend tools and backend tools
+
+
+# NOT FINISHED! Last updated 14th march, 2025
 
 ## Core Concepts
 
