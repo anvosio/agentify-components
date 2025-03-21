@@ -281,7 +281,7 @@ npm run deploy:mcp
 
 This will deploy your MCP server to the Anvos community MCP servers on GitHub where users can easily access it. Your configuration will be available via a unique URL that you can share with AI systems and tools that support the MCP protocol.
 
-I also intend to take it a step further and make it so that only the needed tools for the client will be retuned back instead of the entire MCP server because this would lead to overfill of the MCP client with unnecessary tools.
+I also intend to take it a step further and make it so that only the needed tools for the client will be returned back instead of the entire MCP server because this would lead to overfill of the MCP client with unnecessary tools.
 
 
 ## Component Configuration Options
